@@ -1,0 +1,320 @@
+/*COLOR SCHEME
+
+Coffee Brown - #6F4F28 (Main background or primary color)
+Creamy Beige - #F5F5DC (Background color or accent color)
+Espresso Black - #3D3D3D (Text color or secondary elements)
+Caramel - #FFD700 (Buttons or highlights)
+Leaf Green - #8FBC8F (Call-to-action buttons or secondary accents)
+
+*/
+
+
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header-image {
+    width: 50px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add some space between the image and the text */
+}
+
+/* Header and Navigation Styles */
+header {
+    background-color: #ffffff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns items with space in between */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.main-banner {
+    position: relative;
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: left;
+    padding: 100px 20px;
+    overflow: hidden; /* Ensures content stays within bounds */
+}
+
+.main-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Adjust opacity for the overlay */
+    z-index: 1; /* Ensures the overlay is behind the text */
+}
+
+.main-banner h1,
+.main-banner p {
+    position: relative;
+    z-index: 2; /* Ensures text is above the overlay */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds contrast to text */
+}
+
+
+.main-banner h1 {
+    font-size: 75px; /* Adjust size as needed */
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.main-banner p {
+    font-size: 25px; /* Adjust size as needed */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.choose-button {
+    background-color: #432818;
+    color: white;
+    border: none;
+    padding: 25px 150px;
+    font-size: 25px; /* Slightly larger text for readability */
+    font-weight: bold; /* Adds emphasis to the text */
+    border-radius: 30px; /* Rounded corners for a modern look */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+}
+.special-offer {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #432818;
+}
+
+.special-offer h2 {
+    color: #d8c3a5;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.offer-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Added to handle wrapping of cards if they overflow */
+}
+
+.offer-card {
+    background-color: #d8c3a5;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: left; /* Center align text */
+    border-radius: 25px;
+    width: 300px; /* Adjust as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for better visuals */
+}
+
+.offer-card img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 25px;
+    margin-bottom: 0; /* Remove space below image */
+}
+
+.offer-card h3, .offer-card p {
+    margin: 0 0 10px 0; /* Adjust margins */
+}
+
+.offer-card h3 {
+    font-size: 30px;
+    color: #432818;
+}
+
+.offer-card p {
+    font-size: 15px;
+    color: #432818;
+    font-weight: bold;
+}
+
+.order-btn {
+    text-align: center;
+    background-color: #432818; /* Dark background color for button */
+    color: #d8c3a5;
+    border: none;
+    padding: 20px 95px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px; /* Space above the button */
+    font-weight: bold;
+}
+
+.order-btn:hover {
+    background-color: #5b3a1b; /* Slightly lighter on hover */
+}
+
+
+.coffee-history {
+    padding: 50px 20px;
+    background-color: #d8c3a5; /* Adjust the background color */
+}
+
+.coffee-history h2 {
+    color: #432818;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.history-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Gap between image and text */
+}
+
+.coffee-history img {
+    width: 40%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.history-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.text-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.text-column {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px; /* Space between icon and text */
+    flex: 1;
+}
+
+.text-column i {
+    font-size: 30px; /* Adjust icon size */
+    color: #333;
+    display: inline-block;
+    width: 40px; /* Fixed width for icons */
+    height: 40px; /* Fixed height for icons */
+}
+
+.text-column p {
+    margin: 0 0 10px 0; /* Adjust margins */
+    color: #432818;
+}
+.text-column h3{
+    font-size: 25px;
+    margin: 0 0 10px 0; /* Adjust margins */
+    color: #432818;
+}
+}
+
+.text-column p {
+    display: block;
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.text-column p:nth-child(2) {
+    font-size: 16px;
+    color: #555; /* Subtle color for descriptions */
+}
+
+.text-column img {
+    width: 20%;
+    height: 20%;
+}
+
+
+.subscribe {
+        position: relative;
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: left;
+    padding: 100px 20px;
+    overflow: hidden; /* Ensures content stays within bounds */
+}
+
+.subscribe h1 {
+    font-size: 80px;
+    margin: 0 0 10px 0; /* Adjust margins */
+}
+
+.subscribe p {
+    margin: 0 0 20px 0; /* Adjust margins */
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.subscribe span {
+    color: #7b3f00;
+    font-weight: bold;
+}
+
+.subscribe form input {
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30%;
+    border: none;
+
+}
+
+.subscribe form button {
+    background-color: #432818;
+    color: white;
+    border: none;
+    padding: 18px 80px;
+    font-size: 18px; /* Slightly larger text for readability */
+    font-weight: bold; /* Adds emphasis to the text */
+    border-radius: 30px; /* Rounded corners for a modern look */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+}
+
+
+footer {
+    background-color: #432818;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
